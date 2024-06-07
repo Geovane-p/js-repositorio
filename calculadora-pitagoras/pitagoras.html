@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TEOREMA DE PITAGORAS</title>
+</head>
+<body>
+    <h1>TEOREMAS DE PITAGORAS</h1>
+    CAT.ADJ.: <input type="number" id="cat1" value=""><br>
+    CAT.OPST.: <input type="number" id="cat2" value=""><br>
+    HIPOTENUSA: <input type="number" id="hip" value=""><br>
+    <button onclick="saida()">hip.</button>
+    <button onclick="cate2()">cateto adj.</button>
+    <button onclick="catd2()">cateto opst.</button>
+    <h3>instruções:vamos clasificar os botões como "1,2 e 3" respectivamente.<br>O boão "1" escrito "hip",calcula a hipotenusa.<br>
+        O botão "2" escrito "cateto adj.",calcula o cateto adjascente.<br>
+        O botão "3" escrito "cateto opst.", calcula o cateto oposto.
+
+
+    </h2>
+    <h2></h2>
+    <script>
+        function saida(){
+            var a = Number(document.getElementById("cat1").value);
+            var b = Number(document.getElementById("cat2").value);
+            var hipo = Number(document.getElementById("hip").value);
+            var c = a * a
+            var d = b * b
+            var e = c + d
+            var f = Math.sqrt(e)
+            document.getElementById("resultado").innerHTML = " a hipotenusa é " + f;
+        }
+      
+        function cate2(){
+            var a = Number(document.getElementById("cat1").value);
+            var b = Number(document.getElementById("cat2").value);
+            var hipo = Number(document.getElementById("hip").value);
+            var c = b * b 
+            var d = hipo * hipo
+            var e = c - d
+            console.log ('var e ' + e)
+          
+              if (e < 0 ){
+
+                var f = e / -1 ;
+                var u = Math.sqrt(f)
+                document.getElementById("resultado").innerHTML = " o cateto adjascente é " + u;
+                console.log ('var f '  + f)
+             }
+
+             else {
+
+                var j = Math.sqrt(e)
+                document.getElementById("resultado").innerHTML = " o cateto adjascente é " + j;
+                console.log ('var j ' + j)
+             }
+
+        }
+       
+        function catd2(){     
+            var a = Number(document.getElementById("cat1").value);
+            var b = Number(document.getElementById("cat2").value);
+            var hipo = Number(document.getElementById("hip").value);
+            var c = a * a
+            var d = hipo * hipo
+            var e = c - d
+             if (e < 0 ){
+
+            var f = e / -1 ;
+            var u = Math.sqrt(f)
+                document.getElementById("resultado").innerHTML = " o cateto oposto é " + u;
+            }
+            
+             else {
+
+            var j = Math.sqrt(e)
+            document.getElementById("resultado").innerHTML = " o cateto oposto é " + j;
+            console.log ('var j ' + j)
+}
+           
+        }
+        
+    </script>
+</html>
